@@ -10,7 +10,7 @@
 // ==/UserScript==
 
 (function() {
-    'use strict';
+    //'use strict';
     var newChatButton=document.getElementsByClassName('mb-1 flex flex-row gap-2')[0];
     setTimeout(newChatButton.click(),1000);
     /**
