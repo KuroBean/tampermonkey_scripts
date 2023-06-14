@@ -12,16 +12,18 @@
 (function () {
     //'use strict';
     
-    window.addEventListener('click', function () {
-        console.log("click detected, carry out method");
-        
-        const otherChatButton = document.querySelector('[data-projection-id="3"]');
+    window.addEventListener ("keydown", function (zEvent) {
+        if (zEvent.ctrlKey) {
+        console.log("ctrlkey detected, carry out method");
+        const otherChatButton = document.getElementsByClassName('flex py-3 px-3 items-center gap-3 relative rounded-md hover:bg-[#2A2B32] cursor-pointer break-all )} )} hover:pr-4 bg-gray-900 group')[0];
         console.log(otherChatButton);
-        this.setTimeout(otherChatButton.firstChild.click());
-        //setTimeout(otherChatButton.click(), 1000);
-        //var newChatButton = document.getElementsByClassName('mb-1 flex flex-row gap-2')[0];
-        //setTimeout(newChatButton.click(), 1000);
+        this.setTimeout(otherChatButton.click(),1000);
 
+        /** 
+        var newChatButton = document.getElementsByClassName('flex p-3 items-center gap-3 transition-colors duration-200 text-white cursor-pointer text-sm rounded-md border border-white/20 hover:bg-gray-500/10 h-11 flex-shrink-0 flex-grow')[0];
+        console.log(newChatButton);
+        this.setTimeout(newChatButton.click(), 1000);
+*/
         //ONLY HAPPEN ONCE LIKE THIS, RIGGER WORKS BC END WITH RELOAD WHICH IS THE TRIGGER
         /**
         // Click the button to make a new chat
@@ -50,5 +52,6 @@
             }, 3000); // Adjust the delay (in milliseconds) based on how long it takes for the response to appear
         }, 2000); // Adjust the delay (in milliseconds) based on how long it takes for the question text box to appear
     */
+    }
     });
 })();
