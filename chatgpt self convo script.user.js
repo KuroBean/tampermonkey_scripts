@@ -11,10 +11,11 @@
 
 (function () {
     //'use strict';
+    
     window.addEventListener('click', function () {
         console.log("click detected, carry out method");
         
-        const otherChatButton = document.getElementsByClassName("relative z-[15]")[0];
+        const otherChatButton = document.querySelector('[data-projection-id="3"]');
         console.log(otherChatButton);
         this.setTimeout(otherChatButton.firstChild.click());
         //setTimeout(otherChatButton.click(), 1000);
