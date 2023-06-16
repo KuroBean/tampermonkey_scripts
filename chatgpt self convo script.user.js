@@ -15,10 +15,11 @@
     var responseText = '';
 
     window.addEventListener("keydown", function (zEvent) {
+        const promptArea = document.getElementById('prompt-textarea');
+        const otherChatButton = document.getElementsByClassName('flex py-3 px-3 items-center gap-3 relative rounded-md hover:bg-[#2A2B32] cursor-pointer break-all )} )} hover:pr-4 bg-gray-900 group')[0];
+        const newChatButton = document.getElementsByClassName('flex p-3 items-center gap-3 transition-colors duration-200 text-white cursor-pointer text-sm rounded-md border border-white/20 hover:bg-gray-500/10 h-11 flex-shrink-0 flex-grow')[0];
         if (zEvent.ctrlKey) {
-            const promptArea = document.getElementById('prompt-textarea');
-            const otherChatButton = document.getElementsByClassName('flex py-3 px-3 items-center gap-3 relative rounded-md hover:bg-[#2A2B32] cursor-pointer break-all )} )} hover:pr-4 bg-gray-900 group')[0];
-            const newChatButton = document.getElementsByClassName('flex p-3 items-center gap-3 transition-colors duration-200 text-white cursor-pointer text-sm rounded-md border border-white/20 hover:bg-gray-500/10 h-11 flex-shrink-0 flex-grow')[0];
+
             //input initializing text
             console.log("ctrlkey detected, carry out method");
             console.log(promptArea);
@@ -47,7 +48,7 @@
         }
         else if (zEvent.altKey) {
             //paste response from other chat
-            //promptArea.value = responseText;
+            promptArea.value = responseText;
         }
     });
 
